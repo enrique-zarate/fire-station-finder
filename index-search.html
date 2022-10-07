@@ -11,32 +11,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Buscador de cuarteles</title>
   </head>
-  <body>
-    <main>
+  <body class="bg-gray-100">
+    <main class="">
       <!-- Buscador  -->
-      <section>
-        <h1>Busca cuarteles</h1>
-        <div>
-          <form>
+      <section class="container px-5 mt-7">
+        <h1 class="font-bold text-3xl">Busca cuarteles</h1>
+        <div class="w-full rounded-full bg-white pl-4 mt-4">
+          <form class="flex items-center pl">
             <label for="cuarteles"
               ><i class="fa-solid fa-magnifying-glass"></i
             ></label>
             <input
+              class="mx-3 w-full"
               type="text"
               name=""
               id="cuarteles"
-              placeholder="Barrio Obrero"
+              placeholder="Ingresa tu localidad"
+            />
+            <input
+              type="submit"
+              value="Buscar"
+              class="ml-auto bg-yellow-400 px-5- py-2 rounded-r-full"
             />
           </form>
         </div>
       </section>
 
       <!-- Busquedas recientes -->
-      <section></section>
+      <section class="mt-6 px-5 container">
+        <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
+        <!-- Contenedor de busquedas -->
+        <div class="overflow-scroll mt-4 flex gap-3 pb-2">
+          <a
+            href="#"
+            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+            >Mariano Roque Alonso</a
+          >
+          <a
+            href="#"
+            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+            >Luque</a
+          >
+          <a
+            href="#"
+            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+            >Barrio Obrero</a
+          >
+          <a
+            href="#"
+            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+            >Microcentro</a
+          >
+        </div>
+      </section>
 
       <!-- Resultados -->
       <section>
+        <h2></h2>
         <!-- Carta individual -->
+        <div></div>
       </section>
     </main>
   </body>
