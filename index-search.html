@@ -13,63 +13,191 @@
   </head>
   <body class="bg-gray-100">
     <main class="">
-      <!-- Buscador  -->
-      <section class="container px-5 mt-7">
-        <h1 class="font-bold text-3xl">Busca cuarteles</h1>
-        <div class="w-full rounded-full bg-white pl-4 mt-4">
-          <form class="flex items-center pl">
-            <label for="cuarteles"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></label>
-            <input
-              class="mx-3 w-full"
-              type="text"
-              name=""
-              id="cuarteles"
-              placeholder="Ingresa tu localidad"
-            />
-            <input
-              type="submit"
-              value="Buscar"
-              class="ml-auto bg-yellow-400 px-5- py-2 rounded-r-full"
-            />
-          </form>
-        </div>
-      </section>
+      <!-- Header fixed -->
+      <header class="container px-5 sticky top-0 bg-white pt-7 pb-5">
+        <!-- Buscador  -->
+        <section>
+          <h1 class="font-bold text-3xl">Busca cuarteles</h1>
+          <div class="w-full rounded-full bg-white pl-4 mt-4">
+            <form class="flex items-center pl">
+              <label for="cuarteles"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></label>
+              <input
+                class="mx-3 w-full"
+                type="text"
+                name=""
+                id="cuarteles"
+                placeholder="Ingresa tu localidad"
+              />
+              <input
+                type="submit"
+                value="Buscar"
+                class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full"
+              />
+            </form>
+          </div>
+        </section>
 
-      <!-- Busquedas recientes -->
-      <section class="mt-6 px-5 container">
-        <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
-        <!-- Contenedor de busquedas -->
-        <div class="overflow-scroll mt-4 flex gap-3 pb-2">
-          <a
-            href="#"
-            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-            >Mariano Roque Alonso</a
-          >
-          <a
-            href="#"
-            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-            >Luque</a
-          >
-          <a
-            href="#"
-            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-            >Barrio Obrero</a
-          >
-          <a
-            href="#"
-            class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-            >Microcentro</a
-          >
-        </div>
-      </section>
+        <!-- Busquedas recientes -->
+        <section class="mt-6 container">
+          <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
+          <!-- Contenedor de busquedas -->
+          <div class="overflow-scroll mt-4 flex gap-3 pb-2">
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+              >Mariano Roque Alonso</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+              >Luque</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+              >Barrio Obrero</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+              >Microcentro</a
+            >
+          </div>
+        </section>
+      </header>
 
       <!-- Resultados -->
-      <section>
-        <h2></h2>
-        <!-- Carta individual -->
-        <div></div>
+      <section class="container px-5 mt-7">
+        <h2 class="text-2xl font-bold">Resultados:</h2>
+        <!-- contenedor -->
+        <div class="w-full">
+          <!-- Carta individual -->
+          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+            <!-- Img container -->
+            <div class="shrink-0">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="120"
+                height="100"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold">Areas de cobertura:</span>
+              <p class="text-sm">
+                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Right arrow -->
+            <span class="inline-block text-4xl my-auto"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+            <!-- Img container -->
+            <div class="shrink-0">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="120"
+                height="100"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold">Areas de cobertura:</span>
+              <p class="text-sm">
+                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Right arrow -->
+            <span class="inline-block text-4xl my-auto"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+            <!-- Img container -->
+            <div class="shrink-0">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="120"
+                height="100"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold">Areas de cobertura:</span>
+              <p class="text-sm">
+                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Right arrow -->
+            <span class="inline-block text-4xl my-auto"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+            <!-- Img container -->
+            <div class="shrink-0">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="120"
+                height="100"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold">Areas de cobertura:</span>
+              <p class="text-sm">
+                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Right arrow -->
+            <span class="inline-block text-4xl my-auto"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+        </div>
       </section>
     </main>
   </body>
