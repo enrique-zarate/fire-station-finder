@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/450cb384cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Buscador de cuarteles</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xsm: "425px",
+            sm: "576px",
+            md: "960px",
+            lg: "1440px",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <main class="pb-8">
+      <!-- Buscador  -->
+      <header class="w-full sticky top-0 bg-white py-8 z-10 border-b-2">
+        <section class="container px-5 mx-auto w-full md:max-w-[970px]">
+          <h1 class="font-bold text-3xl md:text-4xl">Buscá cuarteles</h1>
+          <div
+            class="w-full rounded-full bg-white pl-4 mt-4 max-w-[500px] md:drop-shadow-md"
+          >
+            <form class="flex items-center pl">
+              <label for="cuarteles"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></label>
+              <input
+                class="mx-3 w-full"
+                type="text"
+                name=""
+                id="cuarteles"
+                placeholder="Ingresa tu localidad"
+              />
+              <button
+                type="submit"
+                class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full hover:bg-yellow-300 transition ease-out duration-300 hover"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </section>
+      </header>
+
+      <!-- Busquedas recientes -->
+      <div class="bg-white py-7">
+        <section
+          class="container px-5 mx-auto w-full md:max-w-[970px] container"
+        >
+          <h2 class="font-bold text-2xl md:text-3xl">Búsquedas recientes:</h2>
+          <!-- Contenedor de busquedas -->
+          <div class="overflow-scroll mt-4 flex gap-3 pb-2 md:overflow-auto">
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate md:drop-shadow-md hover:bg-gray-200 transition ease-out duration-300 hover"
+              >Mariano Roque Alonso</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
+              >Luque</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
+              >Barrio Obrero</a
+            >
+            <a
+              href="#"
+              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
+              >Microcentro</a
+            >
+          </div>
+        </section>
+      </div>
+
+      <!-- Resultados -->
+      <section class="container px-5 mt-7 mx-auto md:max-w-[970px] pb-5">
+        <h2 class="text-2xl font-bold md:text-3xl">Resultados:</h2>
+        <!-- contenedor -->
+        <div class="mx-auto">
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 w-full max-w-[420px] xsm:flex-row md:max-w-[970px] md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6 transition-all duration-300"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <a
+              href="#"
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
