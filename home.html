@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Radar de Bomberos</title>
+    <style>
+        .shadow-tx {
+            text-shadow: 5px 5px 7px black;
+        }
+    </style>
+</head>
+<body>
+    <section class="h-screen w-screen">
+        <!-- home page-->
+        <div class="h-screen w-full bg-black opacity-90" id="home-page">
+            <div class="relative h-full w-full ">
+                <div class="absolute flex flex-wrap h-full w-full gap-y-20 pt-16">
+                    <div id="logo-text">
+                        <p class=" ml-10 text-6xl text-white font-bold shadow-tx md:text-8xl md:pt-12">
+                            PARA, <br>
+                            BUSCA, <br>
+                            ACTUA. <br>
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center w-full h-1/3">
+                        <button class="w-48 mx-auto rounded-full bg-red-800 p-6 font-bold shadow-xl transition-all duration-500 ease-in-out hover:bg-amber-600 transform hover:-translate-y-1 hover:scale-110 hover:text-orange-600  md:w-72 lg:w-2/5">
+                            <a href="#" class="text-white text-lg md:text-xl">
+                                Buscar cuarteles
+                            </a>
+                        </button>
+                        <div class="mt-4 mx-auto w-80 rounded-2xl bg-white opacity-70 md:w-4/5 md:rounded-full md:mt-8 lg:w-3/5">
+                            <p class="text-center py-6 text-md lg:py-4 lg:text-lg">
+                                    Encontrar la estación de bomberos mas cercana a vos puede evitar tragedias. <br>
+                                    No pierdas el tiempo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--background image-->
+                <div class="h-full w-full object-cover">
+                    <img  src="./img/01fire.jpg" alt="place on fire" class="h-screen lg:w-full  object-cover"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
