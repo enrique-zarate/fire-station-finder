@@ -10,190 +10,375 @@
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Buscador de cuarteles</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xsm: "425px",
+            sm: "576px",
+            md: "960px",
+            lg: "1440px",
+          },
+        },
+      };
+    </script>
   </head>
   <body class="bg-gray-100">
     <main class="">
       <!-- Header fixed -->
-      <header class="container px-5 sticky top-0 bg-white pt-7 pb-5">
-        <!-- Buscador  -->
-        <section>
-          <h1 class="font-bold text-3xl">Busca cuarteles</h1>
-          <div class="w-full rounded-full bg-white pl-4 mt-4">
-            <form class="flex items-center pl">
-              <label for="cuarteles"
-                ><i class="fa-solid fa-magnifying-glass"></i
-              ></label>
-              <input
-                class="mx-3 w-full"
-                type="text"
-                name=""
-                id="cuarteles"
-                placeholder="Ingresa tu localidad"
-              />
-              <input
-                type="submit"
-                value="Buscar"
-                class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full"
-              />
-            </form>
-          </div>
-        </section>
+      <header class="sticky top-0 bg-white pt-7 pb-5 w-full lg:px-0">
+        <!-- Contenedor del contenido -->
+        <div class="container px-5 mx-auto w-full md:max-w-[970px]">
+          <!-- Buscador  -->
+          <section class="shrink-0">
+            <h1 class="font-bold text-3xl">Busca cuarteles</h1>
+            <div class="w-full rounded-full bg-white pl-4 mt-4 max-w-[500px]">
+              <form class="flex items-center pl">
+                <label for="cuarteles"
+                  ><i class="fa-solid fa-magnifying-glass"></i
+                ></label>
+                <input
+                  class="mx-3 w-full"
+                  type="text"
+                  name=""
+                  id="cuarteles"
+                  placeholder="Ingresa tu localidad"
+                />
+                <input
+                  type="submit"
+                  value="Buscar"
+                  class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full"
+                />
+              </form>
+            </div>
+          </section>
 
-        <!-- Busquedas recientes -->
-        <section class="mt-6 container">
-          <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
-          <!-- Contenedor de busquedas -->
-          <div class="overflow-scroll mt-4 flex gap-3 pb-2">
-            <a
-              href="#"
-              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-              >Mariano Roque Alonso</a
-            >
-            <a
-              href="#"
-              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-              >Luque</a
-            >
-            <a
-              href="#"
-              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-              >Barrio Obrero</a
-            >
-            <a
-              href="#"
-              class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
-              >Microcentro</a
-            >
-          </div>
-        </section>
+          <!-- Busquedas recientes -->
+          <section class="mt-6 container">
+            <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
+            <!-- Contenedor de busquedas -->
+            <div class="overflow-scroll mt-4 flex gap-3 pb-2 md:overflow-auto">
+              <a
+                href="#"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                >Mariano Roque Alonso</a
+              >
+              <a
+                href="#"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                >Luque</a
+              >
+              <a
+                href="#"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                >Barrio Obrero</a
+              >
+              <a
+                href="#"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                >Microcentro</a
+              >
+            </div>
+          </section>
+        </div>
       </header>
 
       <!-- Resultados -->
-      <section class="container px-5 mt-7">
+      <section class="container px-5 mt-7 mx-auto md:max-w-[970px]">
         <h2 class="text-2xl font-bold">Resultados:</h2>
         <!-- contenedor -->
-        <div class="w-full">
+        <div class="mx-auto">
           <!-- Carta individual -->
-          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 w-full max-w-[420px] xsm:flex-row md:max-w-[970px] md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
             <!-- Img container -->
-            <div class="shrink-0">
+            <div class="shrink-0 md:border-gray-300 md:border-r-2">
               <img
                 src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
                 alt="Firesation"
-                width="120"
-                height="100"
+                width="100"
+                height="80"
                 class=""
               />
             </div>
             <!-- Text container -->
-            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
               <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
-              <span class="text-xl font-bold">Areas de cobertura:</span>
-              <p class="text-sm">
-                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
               >
                 Llamar
               </button>
             </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
             <!-- Right arrow -->
-            <span class="inline-block text-4xl my-auto"
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
             ></span>
           </div>
           <!-- Carta individual -->
-          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
             <!-- Img container -->
-            <div class="shrink-0">
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
               <img
                 src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
                 alt="Firesation"
-                width="120"
-                height="100"
+                width="100"
+                height="80"
                 class=""
               />
             </div>
             <!-- Text container -->
-            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
               <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
-              <span class="text-xl font-bold">Areas de cobertura:</span>
-              <p class="text-sm">
-                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
               >
                 Llamar
               </button>
             </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
             <!-- Right arrow -->
-            <span class="inline-block text-4xl my-auto"
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
             ></span>
           </div>
           <!-- Carta individual -->
-          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
             <!-- Img container -->
-            <div class="shrink-0">
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
               <img
                 src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
                 alt="Firesation"
-                width="120"
-                height="100"
+                width="100"
+                height="80"
                 class=""
               />
             </div>
             <!-- Text container -->
-            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
               <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
-              <span class="text-xl font-bold">Areas de cobertura:</span>
-              <p class="text-sm">
-                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
               >
                 Llamar
               </button>
             </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
             <!-- Right arrow -->
-            <span class="inline-block text-4xl my-auto"
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
             ></span>
           </div>
           <!-- Carta individual -->
-          <div class="bg-white rounded-lg py-3 px-4 flex justify-between mt-4">
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
             <!-- Img container -->
-            <div class="shrink-0">
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
               <img
                 src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
                 alt="Firesation"
-                width="120"
-                height="100"
+                width="100"
+                height="80"
                 class=""
               />
             </div>
             <!-- Text container -->
-            <div class="flex flex-col items-start gap-1 max-w-[200px]">
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
               <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
-              <span class="text-xl font-bold">Areas de cobertura:</span>
-              <p class="text-sm">
-                Bo. Herrara, Bo. Obrero, F. Bogado, Herrera. Centro
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
               >
                 Llamar
               </button>
             </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
             <!-- Right arrow -->
-            <span class="inline-block text-4xl my-auto"
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+          </div>
+          <!-- Carta individual -->
+          <div
+            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+          >
+            <!-- Img container -->
+            <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
+              <img
+                src="img/pngtree-fire-station-line-filled-icon-png-image_325478-removebg-preview.png"
+                alt="Firesation"
+                width="100"
+                height="80"
+                class=""
+              />
+            </div>
+            <!-- Text container -->
+            <div
+              class="flex flex-col items-center text-center gap-1 max-w-[200px] xsm:text-left xsm:items-start md:max-w-[700px]"
+            >
+              <h3 class="text-3xl font-bold">Cuartel n° 45</h3>
+              <span class="text-xl font-bold md:hidden"
+                >Areas de cobertura:</span
+              >
+              <p class="text-sm md:text-lg font-bold">
+                Bo. Herrera, Bo. Obrero, F. Bogado, Centro
+              </p>
+              <p class="hidden md:block">
+                La Primera Compañía del CBVP K1 Bomba Asunción está ubicada en
+                una zona adyacente al centro de la ciudad de Asunción,
+                específicamente en el Barrio Villa Aurelia a cuadras de la Avda.
+                Eusebio Ayala, cubriendo un área aproximado de 30 Km 2.
+              </p>
+              <!-- Button llamar -->
+              <button
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+              >
+                Llamar
+              </button>
+            </div>
+            <!-- Botton llamar icono -->
+            <button
+              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </button>
+            <!-- Right arrow -->
+            <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
             ></span>
           </div>
