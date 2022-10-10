@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+  </head>
+  <body>
+    <button class="DpModel bg-red-600" id="DpModel">desplegar</button>
+    <!-- Modal  -->
+    <div
+      id="Modal"
+      class="flex opacity-0 pointer-events-none justify-center bg-white bg-opacity-50 absolute inset-0 transition-opacity duration-1000"
+    >
+      <!-- contenedor del modal  -->
+      <div
+        class="container flex flex-col items-center my-10 rounded-2xl shadow-2xl bg-gray-200 max-w-xs max-h-fit"
+      >
+        <!-- Cabecera  -->
+        <div class="flex justify-between items-center w-full h-1/6">
+          <h1 class="font-bold text-3xl w-full text-center">Cuartel 4</h1>
+          <h1
+            id="equis"
+            class="font-bold text-red-600 m-4 mt-2 mr-4 self-start text-3xl"
+          >
+            <a href="">X</a>
+          </h1>
+        </div>
+        <!-- contenido del modal  -->
+        <div class="h-4/6 mx-3 overflow-y-auto">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,
+            explicabo commodi esse repellat, laborum reiciendis molestias
+            laudantium quis voluptatem quo sunt at? Est at laudantium pariatur
+            iusto corrupti fugit tenetur?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,
+            explicabo commodi esse repellat, laborum reiciendis molestias
+            laudantium quis voluptatem quo sunt at? Est at laudantium pariatur
+            iusto corrupti fugit tenetur?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,
+            explicabo commodi esse repellat, laborum reiciendis molestias
+            laudantium quis voluptatem quo sunt at? Est at laudantium pariatur
+            iusto corrupti fugit tenetur?
+          </p>
+        </div>
+        <!-- pie del modal  -->
+        <div class="h-1/6 flex space-x-9 items-center">
+          <button
+            class="bg-gray-400 rounded-full p-2 transition px-4 duration-300 hover:text-white hover:bg-red-500"
+          >
+            Atras
+          </button>
+          <button
+            class="bg-yellow-400 text-white rounded-full p-2 px-4 transition duration-300 hover:bg-green-400"
+          >
+            Llamar
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
