@@ -24,15 +24,19 @@
     </script>
   </head>
   <body class="bg-gray-100">
-    <main class="">
+    <main class="pb-8">
       <!-- Header fixed -->
-      <header class="sticky top-0 bg-white pt-7 pb-5 w-full lg:px-0">
+      <header
+        class="sticky top-0 bg-white pt-7 pb-5 w-full lg:px-0 md:shadow-md"
+      >
         <!-- Contenedor del contenido -->
         <div class="container px-5 mx-auto w-full md:max-w-[970px]">
           <!-- Buscador  -->
-          <section class="shrink-0">
-            <h1 class="font-bold text-3xl">Busca cuarteles</h1>
-            <div class="w-full rounded-full bg-white pl-4 mt-4 max-w-[500px]">
+          <section class="shrink-0 md:border-b-2 md:pb-7">
+            <h1 class="font-bold text-3xl md:text-4xl">Busca cuarteles</h1>
+            <div
+              class="w-full rounded-full bg-white pl-4 mt-4 max-w-[500px] md:drop-shadow-md"
+            >
               <form class="flex items-center pl">
                 <label for="cuarteles"
                   ><i class="fa-solid fa-magnifying-glass"></i
@@ -44,38 +48,39 @@
                   id="cuarteles"
                   placeholder="Ingresa tu localidad"
                 />
-                <input
+                <button
                   type="submit"
-                  value="Buscar"
-                  class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full"
-                />
+                  class="ml-auto bg-yellow-400 px-4 py-2 rounded-r-full hover:bg-yellow-300 transition ease-out duration-300 hover"
+                >
+                  Buscar
+                </button>
               </form>
             </div>
           </section>
 
           <!-- Busquedas recientes -->
-          <section class="mt-6 container">
-            <h2 class="font-bold text-2xl mt">Búsquedas recientes:</h2>
+          <section class="mt-6 container md:mt-6">
+            <h2 class="font-bold text-2xl md:text-3xl">Búsquedas recientes:</h2>
             <!-- Contenedor de busquedas -->
             <div class="overflow-scroll mt-4 flex gap-3 pb-2 md:overflow-auto">
               <a
                 href="#"
-                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate md:drop-shadow-md hover:bg-gray-200 transition ease-out duration-300 hover"
                 >Mariano Roque Alonso</a
               >
               <a
                 href="#"
-                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
                 >Luque</a
               >
               <a
                 href="#"
-                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
                 >Barrio Obrero</a
               >
               <a
                 href="#"
-                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate"
+                class="bg-gray-300 uppercase rounded-full px-4 py-2 text-sm shrink-0 truncate hover:bg-gray-200 transition ease-out duration-300 hover"
                 >Microcentro</a
               >
             </div>
@@ -85,12 +90,12 @@
 
       <!-- Resultados -->
       <section class="container px-5 mt-7 mx-auto md:max-w-[970px]">
-        <h2 class="text-2xl font-bold">Resultados:</h2>
+        <h2 class="text-2xl font-bold md:text-3xl">Resultados:</h2>
         <!-- contenedor -->
         <div class="mx-auto">
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 w-full max-w-[420px] xsm:flex-row md:max-w-[970px] md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 w-full max-w-[420px] xsm:flex-row md:max-w-[970px] md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2">
@@ -121,17 +126,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
@@ -139,7 +144,7 @@
           </div>
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
@@ -170,17 +175,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
@@ -188,7 +193,7 @@
           </div>
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
@@ -219,17 +224,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
@@ -237,7 +242,7 @@
           </div>
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
@@ -268,17 +273,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
@@ -286,7 +291,7 @@
           </div>
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
@@ -317,17 +322,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
@@ -335,7 +340,7 @@
           </div>
           <!-- Carta individual -->
           <div
-            class="carta bg-white rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
+            class="carta bg-white shadow hover:shadow-md rounded-lg py-3 px-4 flex flex-col items-center justify-between mt-4 max-w-[420px] xsm:flex-row md:max-w-fit md:justify-start md:gap-7 md:px-8 md:py-6"
           >
             <!-- Img container -->
             <div class="shrink-0 md:border-gray-300 md:border-r-2 h-full">
@@ -366,17 +371,17 @@
               </p>
               <!-- Button llamar -->
               <button
-                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden"
+                class="font-bold text-white bg-green-800 mt-2 px-4 py-2 rounded-full md:hidden hover:bg-green-600 transition ease-out duration-300"
               >
                 Llamar
               </button>
             </div>
             <!-- Botton llamar icono -->
-            <button
-              class="hidden md:block bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl"
+            <a
+              class="hidden md:grid md:place-items-center bg-green-800 text-white rounded-full w-12 h-24 shrink-0 text-xl hover:bg-green-600 transition ease-out duration-300"
             >
               <i class="fa-solid fa-phone"></i>
-            </button>
+            </a>
             <!-- Right arrow -->
             <span class="text-4xl my-auto hidden xsm:block md:hidden"
               ><i class="fa-solid fa-chevron-right"></i
